@@ -1,33 +1,30 @@
 $(document).ready(function() {
     $('#btn-start').click(function() {
-        let select_page = $("#page-process").val();
-        let select_process = $("#select-process").val();
-        switch (select_process) {
-            case 'a':
-                for (let i = 0; i <= select_page; i++) {
-                    $('#secnemto').html('<div class="col-md-12 text-center text-white bg-primary">A</div>');
+        var select_process = $('#select-process').val();
+        var page_process = $('#page-process').val();
+        if (select_process == "" && page_process == 0) {
+            swal("Debes agregar informacion");
+            return false;
+        } else {
+
+            $.ajax({
+                type: "POST",
+                data: {
+                    "process": select_process,
+                    "pagina": page_process
+                },
+                url: "php/selects_process.php",
+                success: (r) => {
+                    console.log("hola");
+                    console.log(r);
+                    r = r.trim();
+                    if (r == 1) {
+                        swal(":D", "Categoria Agregada con exito", "success");
+                    } else {
+                        swal("D:", "Fallo al agregar", "Error");
+                    }
                 }
-                break;
-            case 'b':
-                for (let i = 0; i <= select_page; i++) {
-                    $('#secnemto').html('<div class="col-md-12 text-center text-white bg-success">B</div>');
-                }
-                break;
-            case 'c':
-                for (let i = 0; i <= select_page; i++) {
-                    $('#secnemto').html('<div class="col-md-12 text-center text-white bg-info">C</div>');
-                }
-                break;
-            case 'd':
-                for (let i = 0; i <= select_page; i++) {
-                    $('#secnemto').html('<div class="col-md-12 text-center text-white bg-warning">D</div>');
-                }
-                break;
-            case 'e':
-                for (let i = 0; i <= select_page; i++) {
-                    $('#secnemto').html('<div class="col-md-12 text-center text-white bg-danger">E</div>');
-                }
-                break;
+            });
         }
     });
 });
