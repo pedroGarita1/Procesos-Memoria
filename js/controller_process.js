@@ -6,7 +6,6 @@ $(document).ready(function() {
             swal("Debes agregar informacion");
             return false;
         } else {
-
             $.ajax({
                 type: "POST",
                 data: {
@@ -15,13 +14,13 @@ $(document).ready(function() {
                 },
                 url: "php/selects_process.php",
                 success: (r) => {
-                    console.log("hola");
-                    console.log(r);
                     r = r.trim();
                     if (r == 1) {
-                        swal(":D", "Categoria Agregada con exito", "success");
+                        swal(":D", "Proceso agregado con exito", "success");
+                        location.reload();
                     } else {
-                        swal("D:", "Fallo al agregar", "Error");
+                        swal("D:", "Fallo al agregar el proceso", "Error");
+                        location.reload();
                     }
                 }
             });

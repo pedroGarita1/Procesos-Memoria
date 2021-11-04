@@ -78,46 +78,16 @@
             <div class="col-md-3 text-center">
                 <h5 class="card-title mt-2">Page Frame</h5>
                 <div class="card-body">
-                    <div id="secnemto">
-
-                    </div>
+                    <?php require_once "view/agregar_procesos.php"?>
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="card" style="width: 27rem;">
-                    <div class="col-md-12 text-center">
-                        <h5 class="card-title mt-2">Information</h5>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Execute</th>
-                                    <th scope="col">wait</th>
-                                    <th scope="col">Finish</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <?php require_once "view/tabla_opciones.php"?>
             </div>
         </div>
 
     </div>
     </div>
-
 </body>
 
 </html>

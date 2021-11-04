@@ -3,9 +3,11 @@
     $process = new procesos();
     $datos= array(
         "procesos" => $_POST['process'],
-        "paginas" => $_POST['pagina']
+        "paginas" => $_POST['pagina'],
     );
-
-    echo $process->agregar_proceso($datos);
-
+    $estados = array(
+        "activo" => "activo",
+        "detenido" => "detenido"
+    );
+    echo $process->agregar_proceso($datos,$estados);
 ?>
