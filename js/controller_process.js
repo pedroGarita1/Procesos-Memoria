@@ -3,7 +3,7 @@ $(document).ready(function() {
         var select_process = $('#select-process').val();
         var page_process = $('#page-process').val();
         if (select_process == "" && page_process == 0) {
-            swal("Debes agregar informacion");
+            swal("Debes agregar informacion"); //suma de variables para mostrar en el front 
             return false;
         } else {
             $.ajax({
@@ -20,7 +20,6 @@ $(document).ready(function() {
                         location.reload();
                     } else {
                         swal("D:", "Fallo al agregar el proceso", "Error");
-                        location.reload();
                     }
                 }
             });

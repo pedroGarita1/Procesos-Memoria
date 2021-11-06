@@ -7,7 +7,7 @@
     while($mostrar = mysqli_fetch_array($resultado)){
         if($mostrar['estado_process'] == "activo"){
             if($mostrar['letra_process'] == "a"){
-                for($i = 1; $i<= $mostrar['page_process']; $i++){       
+                for($i = 1; $i<= $mostrar['page_process']; $i++){
 ?>
                     <div class="col-md-12 bg-info">A</div>
 <?php
