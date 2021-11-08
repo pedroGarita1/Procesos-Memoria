@@ -7,3 +7,5 @@
 <script src="js/b4/js/bootstrap.js"></script>
 <script src="js/sweetalert/sweetalert.min.js"></script>
 <script src="js/controller_process.js"></script>
+<script src="js/controller_eliminar_proceso.js"></script>
+<script src="js/controller_cargar_vistas.js"></script>

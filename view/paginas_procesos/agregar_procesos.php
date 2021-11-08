@@ -1,5 +1,5 @@
 <?php
-    require_once "app/config/conexion.php";
+    require_once "../../app/config/conexion.php";
     $conectar = new Conectar();
     $conexion = $conectar->conexion();
     $sql = "SELECT * FROM t_process";
