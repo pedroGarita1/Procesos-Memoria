@@ -18,6 +18,6 @@
             <?php require_once "view/inicio/vista_informacion_frame.php";?>
         </div>
     </div>
-    </div>
+    <?php require_once "view/creadores.php";?>
 </body>
 </html>
